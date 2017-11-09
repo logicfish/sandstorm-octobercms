@@ -1,2 +1,2 @@
 # sandstorm-octobercms
-OctoberCMS on sandstorm
+[OctoberCMS](http://octobercms.com) on sandstorm
