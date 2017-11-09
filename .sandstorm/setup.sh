@@ -25,6 +25,7 @@ sed --in-place='' \
         --expression='s/^listen.group = www-data/;listen.group = www-data/' \
         --expression='s/^user = www-data/;user = www-data/' \
         --expression='s/^group = www-data/;group = www-data/' \
+        --expression='s/^listen = \/run\/php\/php7.0-fpm.sock/listen = \/var\/run\/php\/php7.0-fpm.sock/' \
         /etc/php/7.0/fpm/pool.d/www.conf
 # patch /etc/php/7.0/fpm/php-fpm.conf to not have a pidfile
 sed --in-place='' \
