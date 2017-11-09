@@ -1,5 +1,5 @@
 # Sandstorm-OctoberCMS
-[OctoberCMS](http://octobercms.com) on sandstorm
+[OctoberCMS](http://octobercms.com) on [sandstorm](http://sandstorm.io)
 
 ## Installation
 
