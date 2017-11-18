@@ -36,10 +36,7 @@ done
 /usr/sbin/nginx -c /opt/app/.sandstorm/service-config/nginx.conf -g "daemon off;"
 
 mkdir -P /var/lib/app/storage/
-rm -r /opt/app/storage/
-ln -S /opt/app/storage /var/lib/app/storage
+cp -r /opt/app/storage-orig/* /var/lib/app/storage
 
 echo "CREATE DATABASE IF NOT EXISTS app; GRANT ALL on app.* TO 'app'@'localhost' IDENTIFIED BY 'app';" | mysql -uroot --socket /var/run/mysqld/mysqld.sock
-cd /opt/app/myoctober
-php ../composer.phar update
-php artisan october:install
+#cd /opt/app/

@@ -21,7 +21,15 @@ if [ ! -d myoctober/ ] ; then
 	php composer.phar create-project october/october myoctober
 fi
 
+cd /opt/app/myoctober
+
+php ../composer.phar update
+php artisan october:install
+
+cd /opt/app
+mv storage storage-orig
+ln -S /opt/app/storage /var/lib/app/storage
+
 #cd myoctober
 #php ../composer.phar update
 #php artisan october:install
-
