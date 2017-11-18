@@ -39,4 +39,6 @@ mkdir -P /var/lib/app/storage/
 cp -r /opt/app/storage-orig/* /var/lib/app/storage
 
 echo "CREATE DATABASE IF NOT EXISTS app; GRANT ALL on app.* TO 'app'@'localhost' IDENTIFIED BY 'app';" | mysql -uroot --socket /var/run/mysqld/mysqld.sock
-#cd /opt/app/
+
+cd /opt/app/myoctober
+php artisan october:install
