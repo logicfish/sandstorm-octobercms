@@ -28,7 +28,7 @@ php artisan october:install
 
 cd /opt/app
 mv storage storage-orig
-ln -S /opt/app/storage /var/lib/app/storage
+ln -s /opt/app/storage /var/lib/app/storage
 
 #cd myoctober
 #php ../composer.phar update
