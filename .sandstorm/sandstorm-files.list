@@ -185,6 +185,7 @@ opt/app/modules/cms/classes/CodeBase.php
 opt/app/modules/cms/classes/CodeParser.php
 opt/app/modules/cms/classes/ComponentBase.php
 opt/app/modules/cms/classes/ComponentManager.php
+opt/app/modules/cms/classes/ComponentPartial.php
 opt/app/modules/cms/classes/Content.php
 opt/app/modules/cms/classes/Controller.php
 opt/app/modules/cms/classes/Layout.php
@@ -201,10 +202,12 @@ opt/app/modules/cms/components/ViewBag.php
 opt/app/modules/cms/contracts/CmsObject.php
 opt/app/modules/cms/facades/Cms.php
 opt/app/modules/cms/helpers/Cms.php
+opt/app/modules/cms/helpers/File.php
 opt/app/modules/cms/lang/en/lang.php
 opt/app/modules/cms/models/MaintenanceSetting.php
 opt/app/modules/cms/models/ThemeLog.php
 opt/app/modules/cms/routes.php
+opt/app/modules/cms/twig/ComponentNode.php
 opt/app/modules/cms/twig/ComponentTokenParser.php
 opt/app/modules/cms/twig/ContentNode.php
 opt/app/modules/cms/twig/ContentTokenParser.php
@@ -621,6 +624,8 @@ opt/app/plugins
 opt/app/plugins/october
 opt/app/plugins/october/demo
 opt/app/plugins/october/demo/Plugin.php
+opt/app/plugins/october/demo/components/Todo.php
+opt/app/plugins/october/demo/components/todo/default.htm
 opt/app/storage
 opt/app/storage-orig
 opt/app/storage-orig/app
@@ -643,6 +648,7 @@ opt/app/storage-orig/temp/public
 opt/app/themes/demo/assets/css/theme.css
 opt/app/themes/demo/assets/css/vendor.css
 opt/app/themes/demo/assets/fonts/lato-black-webfont.woff
+opt/app/themes/demo/assets/fonts/lato-italic-webfont.woff
 opt/app/themes/demo/assets/fonts/lato-light-webfont.woff
 opt/app/themes/demo/assets/fonts/lato-regular-webfont.woff
 opt/app/themes/demo/assets/images/october.png
@@ -660,6 +666,9 @@ opt/app/themes/demo/pages/ajax.htm
 opt/app/themes/demo/pages/error.htm
 opt/app/themes/demo/pages/home.htm
 opt/app/themes/demo/pages/plugins.htm
+opt/app/themes/demo/partials/calcresult.htm
+opt/app/themes/demo/partials/explain/ajax.htm
+opt/app/themes/demo/partials/explain/plugins.htm
 opt/app/themes/demo/partials/site/footer.htm
 opt/app/themes/demo/partials/site/header.htm
 opt/app/vendor/autoload.php
@@ -909,6 +918,7 @@ opt/app/vendor/october/rain/src/Foundation/Bootstrap/RegisterClassLoader.php
 opt/app/vendor/october/rain/src/Foundation/Bootstrap/RegisterOctober.php
 opt/app/vendor/october/rain/src/Foundation/Exception/Handler.php
 opt/app/vendor/october/rain/src/Foundation/Http/Kernel.php
+opt/app/vendor/october/rain/src/Foundation/Maker.php
 opt/app/vendor/october/rain/src/Foundation/Providers/ArtisanServiceProvider.php
 opt/app/vendor/october/rain/src/Foundation/Providers/LogServiceProvider.php
 opt/app/vendor/october/rain/src/Foundation/Providers/MakerServiceProvider.php
@@ -1016,11 +1026,13 @@ opt/app/vendor/twig/twig/lib/Twig/Function.php
 opt/app/vendor/twig/twig/lib/Twig/Lexer.php
 opt/app/vendor/twig/twig/lib/Twig/LoaderInterface.php
 opt/app/vendor/twig/twig/lib/Twig/Node.php
+opt/app/vendor/twig/twig/lib/Twig/Node/Block.php
 opt/app/vendor/twig/twig/lib/Twig/Node/Body.php
 opt/app/vendor/twig/twig/lib/Twig/Node/Expression.php
 opt/app/vendor/twig/twig/lib/Twig/Node/Expression/Array.php
 opt/app/vendor/twig/twig/lib/Twig/Node/Expression/Binary.php
 opt/app/vendor/twig/twig/lib/Twig/Node/Expression/Binary/Equal.php
+opt/app/vendor/twig/twig/lib/Twig/Node/Expression/BlockReference.php
 opt/app/vendor/twig/twig/lib/Twig/Node/Expression/Call.php
 opt/app/vendor/twig/twig/lib/Twig/Node/Expression/Constant.php
 opt/app/vendor/twig/twig/lib/Twig/Node/Expression/Filter.php

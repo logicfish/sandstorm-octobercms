@@ -1,4 +1,4 @@
-@0xdd65e317706421cf;
+@0x83539314a0981775;
 
 using Spk = import "/sandstorm/package.capnp";
 # This imports:
@@ -9,7 +9,7 @@ const pkgdef :Spk.PackageDefinition = (
   # The package definition. Note that the spk tool looks specifically for the
   # "pkgdef" constant.
 
-  id = "cnf01eyms6m26s74r9s8t8q1dptdennzguhch03k91xafv12e1fh",
+  id = "3gayugmr4xmvexs7v4qfuj62fgs0e7e9z4j620sdv4c86789073h",
   # Your app ID is actually its public key. The private key was placed in
   # your keyring. All updates must be signed with the same key.
 
@@ -17,7 +17,7 @@ const pkgdef :Spk.PackageDefinition = (
     # This manifest is included in your app package to tell Sandstorm
     # about your app.
 
-    appTitle = (defaultText = "Laravel/October CMS"),
+    appTitle = (defaultText = "Example App"),
 
     appVersion = 0,  # Increment this for every release.
 
@@ -73,7 +73,7 @@ const pkgdef :Spk.PackageDefinition = (
       author = (
         # Fields relating to the author of this app.
 
-        contactEmail = "logicfish@gmail.com",
+        contactEmail = "youremail@example.com",
         # Email address to contact for any issues with this app. This includes end-user support
         # requests as well as app store administrator requests, so it is very important that this be a
         # valid address with someone paying attention to it.
@@ -114,7 +114,7 @@ const pkgdef :Spk.PackageDefinition = (
       # in an app store. Note that the Markdown is not permitted to contain HTML nor image tags (but
       # you can include a list of screenshots separately).
 
-      shortDescription = (defaultText = "October CMS (laravel)"),
+      shortDescription = (defaultText = "one-to-three words"),
       # A very short (one-to-three words) description of what the app does. For example,
       # "Document editor", or "Notetaking", or "Email client". This will be displayed under the app
       # title in the grid view in the app market.
