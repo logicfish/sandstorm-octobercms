@@ -28,6 +28,4 @@ php ../composer.phar update
 
 cd /opt/app
 mv storage storage-orig
-cp -r storage-orig /var/lib/app/storage
-ln -s /var/lib/app/storage /opt/app/storage
-
+ln -s /var/lib/app/storage storage
