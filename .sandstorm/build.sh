@@ -24,7 +24,7 @@ fi
 cd /opt/app/myoctober
 
 php ../composer.phar update
-php artisan october:install
+#php artisan october:install
 
 cd /opt/app
 mv storage storage-orig
