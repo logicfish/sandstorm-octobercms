@@ -16,13 +16,19 @@ mkdir -p /var/tmp
 mkdir -p /var/run/mysqld
 mkdir -p /var/run/php
 
-mkdir -p /var/lib/app/storage
-cp -r /opt/app/storage-orig/* /var/lib/app/storage
+mkdir -p /var/storage
+cp -r /opt/app/storage-orig/* /var/storage
+chmod 777 -R /var/storage
 
-ls -la /var/lib/app/storage
+# Cleanup log files
+FILES="$(find /var/log -name '*.log')"
+for f in $FILES
+do
+	  tail $f | tee $f
+done
 
-mkdir -p /var/lib/app/storage/framework
-chmod 777 /opt/app/storage/framework
+#mkdir -p /var/storage/framework
+#chmod 777 /opt/app/storage/framework
 
 # Ensure mysql tables created
 HOME=/etc/mysql /usr/bin/mysql_install_db --force
@@ -47,5 +53,8 @@ done
 
 echo "CREATE DATABASE IF NOT EXISTS app; GRANT ALL on app.* TO 'app'@'localhost' IDENTIFIED BY 'app';" | mysql -uroot --socket /var/run/mysqld/mysqld.sock
 
+
 cd /opt/app/myoctober
+
+php artisan migrate --force
 php artisan october:up
