@@ -17,7 +17,7 @@ const pkgdef :Spk.PackageDefinition = (
     # This manifest is included in your app package to tell Sandstorm
     # about your app.
 
-    appTitle = (defaultText = "Example App"),
+    appTitle = (defaultText = "October CMS"),
 
     appVersion = 0,  # Increment this for every release.
 
@@ -57,15 +57,15 @@ const pkgdef :Spk.PackageDefinition = (
       website = "http://example.com",
       # This should be the app's main website url.
 
-      codeUrl = "http://example.com",
+      codeUrl = "http://github.com/logicfish/sandstorm-octobercms",
       # URL of the app's source code repository, e.g. a GitHub URL.
       # Required if you specify a license requiring redistributing code, but optional otherwise.
 
-      license = (none = void),
+      license = (none = MIT),
       # The license this package is distributed under.  See
       # https://docs.sandstorm.io/en/latest/developing/publishing-apps/#license
 
-      categories = [],
+      categories = [ ],
       # A list of categories/genres to which this app belongs, sorted with best fit first.
       # See the list of categories at
       # https://docs.sandstorm.io/en/latest/developing/publishing-apps/#categories
@@ -73,7 +73,7 @@ const pkgdef :Spk.PackageDefinition = (
       author = (
         # Fields relating to the author of this app.
 
-        contactEmail = "youremail@example.com",
+        contactEmail = "logicfish@gmail.com",
         # Email address to contact for any issues with this app. This includes end-user support
         # requests as well as app store administrator requests, so it is very important that this be a
         # valid address with someone paying attention to it.
@@ -92,7 +92,7 @@ const pkgdef :Spk.PackageDefinition = (
         # Further details including how to set up GPG and how to use keybase.io can be found
         # at https://docs.sandstorm.io/en/latest/developing/publishing-apps/#verify-your-identity
 
-        upstreamAuthor = "Example App Team",
+        upstreamAuthor = "October CMS",
         # Name of the original primary author of this app, if it is different from the person who
         # produced the Sandstorm package. Setting this implies that the author connected to the PGP
         # signature only "packaged" the app for Sandstorm, rather than developing the app.

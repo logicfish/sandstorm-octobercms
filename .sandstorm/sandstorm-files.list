@@ -174,7 +174,15 @@ opt/app/config/session.php
 opt/app/config/view.php
 opt/app/index.php
 opt/app/modules/backend/ServiceProvider.php
+opt/app/modules/backend/classes/AuthManager.php
+opt/app/modules/backend/classes/BackendController.php
+opt/app/modules/backend/classes/NavigationManager.php
+opt/app/modules/backend/classes/WidgetManager.php
+opt/app/modules/backend/facades/BackendAuth.php
+opt/app/modules/backend/facades/BackendMenu.php
+opt/app/modules/backend/lang/en/lang.php
 opt/app/modules/backend/routes.php
+opt/app/modules/backend/views/no_database.php
 opt/app/modules/cms/ServiceProvider.php
 opt/app/modules/cms/classes/CmsCompoundObject.php
 opt/app/modules/cms/classes/CmsController.php
@@ -231,8 +239,10 @@ opt/app/modules/cms/twig/StylesTokenParser.php
 opt/app/modules/system/ServiceProvider.php
 opt/app/modules/system/aliases.php
 opt/app/modules/system/assets/css/framework.extras.css
+opt/app/modules/system/assets/css/styles.css
 opt/app/modules/system/assets/js/framework.extras.js
 opt/app/modules/system/assets/js/framework.js
+opt/app/modules/system/assets/ui/font/fontawesome-webfont.woff
 opt/app/modules/system/behaviors/SettingsModel.php
 opt/app/modules/system/classes/CombineAssets.php
 opt/app/modules/system/classes/MailManager.php
@@ -240,6 +250,7 @@ opt/app/modules/system/classes/MarkupManager.php
 opt/app/modules/system/classes/ModelBehavior.php
 opt/app/modules/system/classes/PluginBase.php
 opt/app/modules/system/classes/PluginManager.php
+opt/app/modules/system/classes/SettingsManager.php
 opt/app/modules/system/helpers/DateTime.php
 opt/app/modules/system/helpers/View.php
 opt/app/modules/system/providers.php
@@ -641,7 +652,6 @@ opt/app/storage-orig/framework/cache
 opt/app/storage-orig/framework/sessions
 opt/app/storage-orig/framework/views
 opt/app/storage-orig/logs
-opt/app/storage-orig/storage
 opt/app/storage-orig/system.json
 opt/app/storage-orig/temp
 opt/app/storage-orig/temp/public
@@ -730,8 +740,11 @@ opt/app/vendor/laravel/framework/src/Illuminate/Contracts/Session/Session.php
 opt/app/vendor/laravel/framework/src/Illuminate/Contracts/Support/Arrayable.php
 opt/app/vendor/laravel/framework/src/Illuminate/Contracts/Support/Htmlable.php
 opt/app/vendor/laravel/framework/src/Illuminate/Contracts/Support/Jsonable.php
+opt/app/vendor/laravel/framework/src/Illuminate/Contracts/Support/Renderable.php
 opt/app/vendor/laravel/framework/src/Illuminate/Contracts/Translation/Translator.php
+opt/app/vendor/laravel/framework/src/Illuminate/Contracts/View/Engine.php
 opt/app/vendor/laravel/framework/src/Illuminate/Contracts/View/Factory.php
+opt/app/vendor/laravel/framework/src/Illuminate/Contracts/View/View.php
 opt/app/vendor/laravel/framework/src/Illuminate/Cookie/CookieJar.php
 opt/app/vendor/laravel/framework/src/Illuminate/Cookie/CookieServiceProvider.php
 opt/app/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php
@@ -868,10 +881,13 @@ opt/app/vendor/laravel/framework/src/Illuminate/View/Concerns/ManagesLoops.php
 opt/app/vendor/laravel/framework/src/Illuminate/View/Concerns/ManagesStacks.php
 opt/app/vendor/laravel/framework/src/Illuminate/View/Concerns/ManagesTranslations.php
 opt/app/vendor/laravel/framework/src/Illuminate/View/Engines/EngineResolver.php
+opt/app/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php
 opt/app/vendor/laravel/framework/src/Illuminate/View/Factory.php
 opt/app/vendor/laravel/framework/src/Illuminate/View/FileViewFinder.php
 opt/app/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php
+opt/app/vendor/laravel/framework/src/Illuminate/View/View.php
 opt/app/vendor/laravel/framework/src/Illuminate/View/ViewFinderInterface.php
+opt/app/vendor/laravel/framework/src/Illuminate/View/ViewName.php
 opt/app/vendor/laravel/framework/src/Illuminate/View/ViewServiceProvider.php
 opt/app/vendor/laravel/tinker/src/TinkerServiceProvider.php
 opt/app/vendor/monolog/monolog/src/Monolog/Formatter/FormatterInterface.php
@@ -885,6 +901,7 @@ opt/app/vendor/monolog/monolog/src/Monolog/Logger.php
 opt/app/vendor/nesbot/carbon/src/Carbon/Carbon.php
 opt/app/vendor/october/rain/src/Argon/Argon.php
 opt/app/vendor/october/rain/src/Argon/ArgonServiceProvider.php
+opt/app/vendor/october/rain/src/Auth/Manager.php
 opt/app/vendor/october/rain/src/Config/FileLoader.php
 opt/app/vendor/october/rain/src/Config/LoaderInterface.php
 opt/app/vendor/october/rain/src/Config/Repository.php
